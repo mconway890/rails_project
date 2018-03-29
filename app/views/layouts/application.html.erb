@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Railsapp</title>
+    <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
+    <link rel='stylesheet' href='style.css'/>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class="header">
+    	<div class="container">
+    	<a href="https://imgur.com/AaSpC3c"><img src="https://i.imgur.com/AaSpC3c.png?1" title="source: imgur.com"/></a>
+        <div class="search">
+          <form class="search-form">
+  <input type="text" placeholder="Search Vacations">
+  <button type="submit" class="search-btn">Search</button>
+					</form>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu">
+    <div class="container">
+    		<ul class="nav">
+          <li class="active">Sign Up</li>
+          <li>Sign In</li>
+          <li>Sign Out</li>
+      </ul>
+      </div>
+    </div>
+
+    <div class="main">
+    		<div class="container">
+    			<div class="row">
+    				<div class="col-md-5">
+    					<p class="date"><%= Time.now.strftime("Today is %m/%d/%Y") %></p>
+              <h2><span>Family Vacation Planner</span></h2>
+              <p>A site to keep you organized and prepared while planning your family vacations.</p>
+            </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="supporting">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <h3>Latest News</h3>
+            <ul>
+              <li>
+                <p class="date">November 5, 2014</p>
+                <h4><span>Michelle is bringing a pack n' play.</span></h4> </li>
+              <li> <p class="date">November 4, 2014</p>
+                <h4><span>Bill is bringing Captain Morgan and Coke.</span></h4> </li>
+              <li> <p class="date">November 2, 2014</p>
+                <h4><span>Christine is bringing 2 ipads and beach toys.</span></h4> </li> </ul>
+          </div>
+          <div class="col-md-4 sidebar">
+            <h3>Upcoming Trips</h3>
+            <ul>
+              <li>
+                <p class="date">November 8-12, 2014</p> <h4><span>Lake George</span></h4> </li>
+              <li> <p class="date">November 21, 2014</p>
+                <h4><span>Disney World</span></h4> </li> 									<li>
+              <p class="date">December 5, 2014</p>
+              <h4><span>Aruba</span></h4> 								</li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12"> <a href="https://imgur.com/NvM7hYH"><img src="https://i.imgur.com/NvM7hYH.jpg?1" title="source: imgur.com" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+    <div class="footer">
+    <div class="container">
+      	<ul>
+          <li><a href="#">My List</a></li>
+          <li><a href="#">Group List</a></li>
+          <li><a href="#">Messages</a></li>
+      </ul>
+      <p>&copy;2018 Family Vacation Planner</p>
+      </div>
+    </div>
+    <%= yield %>
+  </body>
+</html>
