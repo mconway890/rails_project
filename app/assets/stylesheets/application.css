@@ -20,7 +20,7 @@
 
  html, body {
      background: #f2f2f2;
-     font-family: 'Lato', sans-serif;
+     font-family: 'PT Sans', sans-serif;
 
  }
 
@@ -51,6 +51,7 @@
 
  img {
      vertical-align: middle;
+     float:left;
  }
 
  .search {
@@ -83,9 +84,10 @@
  }
 
  .menu {
-     background: #152230;
+     background: #000;
      min-height: 40px;
      color: #fff;
+     text-align: right;
  }
 
  .menu ul.nav {

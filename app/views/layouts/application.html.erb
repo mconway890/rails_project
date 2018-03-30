@@ -4,6 +4,7 @@
     <title>Railsapp</title>
     <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
     <link rel='stylesheet' href='style.css'/>
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,24 +12,25 @@
   </head>
 
   <body>
-    <div class="header">
+    <!--<div class="header">
     	<div class="container">
-    	<a href="https://imgur.com/AaSpC3c"><img src="https://i.imgur.com/AaSpC3c.png?1" title="source: imgur.com"/></a>
+
         <div class="search">
           <form class="search-form">
-  <input type="text" placeholder="Search Vacations">
-  <button type="submit" class="search-btn">Search</button>
+            <input type="text" placeholder="Search Vacations">
+            <button type="submit" class="search-btn">Search</button>
 					</form>
         </div>
       </div>
     </div>
-
+-->
     <div class="menu">
     <div class="container">
     		<ul class="nav">
-          <li class="active">Sign Up</li>
-          <li>Sign In</li>
-          <li>Sign Out</li>
+          <a href="https://imgur.com/AaSpC3c"><img src="https://i.imgur.com/AaSpC3c.png?1" title="source: imgur.com"/></a>
+          <li class="active">SIGN UP</li>
+          <li>SIGN IN</li>
+          <li>SIGN OUT</li>
       </ul>
       </div>
     </div>
@@ -93,6 +95,12 @@
       <p>&copy;2018 Family Vacation Planner</p>
       </div>
     </div>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
     <%= yield %>
   </body>
 </html>
