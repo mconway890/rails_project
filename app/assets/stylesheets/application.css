@@ -59,7 +59,7 @@
      margin: 25px 0 0 0;
  }
 
- .search-form input {
+ /*.search-form input {
      background: transparent;
      border: 0px;
      border-bottom: 1px solid #fff;
@@ -82,7 +82,7 @@
      margin: 0 0 0 10px;
      padding: 0 10px;
  }
-
+*/
  .menu {
      background: #000;
      min-height: 40px;
@@ -96,9 +96,7 @@
      padding: 0;
  }
 
- .menu ul.nav li:hover, .menu ul.nav li.active {
-     background: #2ddace;
- }
+
 
  .menu ul.nav li {
      display: inline-block;
@@ -116,6 +114,9 @@
 
  }
 
+.menu ul.nav li a:hover {
+  color: black;
+}
 
 
  .main {
