@@ -115,7 +115,8 @@
  }
 
 .menu ul.nav li a:hover {
-  color: black;
+  color: white;
+  background-color: black;
 }
 
 
@@ -135,7 +136,7 @@
  }
 
  .main .container .col-md-5 h2 {
-     color: #fff;
+     color: #000;
      font-size: 60px;
      margin: 20px 0;
  }
