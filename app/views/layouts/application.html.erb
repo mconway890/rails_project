@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsapp</title>
+    <title>Family Vacation Planner</title>
     <link rel="stylesheet" href="https://s3.amazonaws.com/codecademy-content/projects/bootstrap.min.css">
     <link rel='stylesheet' href='style.css'/>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
@@ -37,6 +37,12 @@
             <div class="col-md-5">
               <!--<p class="date"><%= Time.now.strftime("Today is %m/%d/%Y") %></p>-->
               <%= yield %>
+              <% if notice %>
+                <p class="alert alert-success"><%= notice %></p>
+              <% end %>
+              <% if alert %>
+                <p class="alert alert-danger"><%= alert %></p>
+              <% end %>
             </div>
           </div>
         </div>
@@ -61,11 +67,5 @@
     <p>&copy;2018 Family Vacation Planner</p>
   </div>
 </div>
-<% if notice %>
-  <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
 </body>
 </html>

@@ -141,14 +141,24 @@
      margin: 20px 0;
  }
 
- span {
-   /* */
+ .main .container .col-md-5 p {
+     color: black;
+     font-size: 20px;
  }
 
- .main .container .col-md-5 p {
-     color: #fff;
-     font-size: 20px;
-     width: 100%;
+ p.alert.alert-danger {
+    background-color: #8ac1bc00;
+    border-color: #ebccd100;
+    width: 70%;
+    color: black;
+ }
+
+ .main .container .col-md-5 #error_explanation h2 {
+   font-size: 20px;
+ }
+
+ .main .container .col-md-5 #error_explanation {
+   font-size: 14px;
  }
 
 
