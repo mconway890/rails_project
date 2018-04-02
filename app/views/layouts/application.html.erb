@@ -36,7 +36,11 @@
           <div class="row">
             <div class="col-md-5">
               <!--<p class="date"><%= Time.now.strftime("Today is %m/%d/%Y") %></p>-->
-              <%= link_to('Log in with Facebook!', '/auth/facebook') %>
+              <% if current_user %>
+                <li>Signed in as <%= current_user.name %></li>
+              <% else %>
+                <li><%= link_to "Sign in with Twitter", "auth/twitter"  %></li>
+              <% end %>
               <%= yield %>
               <% if notice %>
                 <p class="alert alert-success"><%= notice %></p>

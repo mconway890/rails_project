@@ -11,12 +11,14 @@
 /db/*.sqlite3
 /db/*.sqlite3-journal
 
+# Ignore .env used for storing keys and access tokens
+.env
+
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-.env
 /node_modules
 /yarn-error.log
 
