@@ -36,18 +36,13 @@
           <div class="row">
             <div class="col-md-5">
               <!--<p class="date"><%= Time.now.strftime("Today is %m/%d/%Y") %></p>-->
-              <% if current_user %>
-                <li>Signed in as <%= current_user.name %></li>
-              <% else %>
-                <li><%= link_to "Sign in with Twitter", "auth/twitter"  %></li>
-              <% end %>
-              <%= yield %>
               <% if notice %>
                 <p class="alert alert-success"><%= notice %></p>
               <% end %>
               <% if alert %>
                 <p class="alert alert-danger"><%= alert %></p>
               <% end %>
+              <%= yield %>
             </div>
           </div>
         </div>
