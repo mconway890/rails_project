@@ -2,8 +2,12 @@
 
 <% @vacations.each do |v| %>
   <ul>
-    <li><%= v.name %></li>
+    <li>Name: <%= v.name %></li>
+    <li>Destination: <%= v.destination %></li>
+    <li>Travelers: <%= v.traveler %></li>
+    <li>Start: <%= v.start %></li>
+    <li>End: <%= v.end %></li>
   </ul>
 <% end %>
 
-<%= button_to "Create New Vacation", new_vacation_path(@user) %>
+<%= button_to "Create New Vacation", new_vacations_path(@user) %>

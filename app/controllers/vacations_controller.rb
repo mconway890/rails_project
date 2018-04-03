@@ -10,12 +10,15 @@ class VacationsController < ApplicationController
 
   def create
     @vacation = Vacation.create(vacation_params)
-    redirect_to new_vacation_path(@vacation)
+    redirect_to vacations_index_path
+  end
+
+  def show
   end
 
   private
 
   def vacation_params
-    params.require(:vacation).permit(:name, :destination, :type, :start, :end)
+    params.require(:vacation).permit(:name, :destination, :traveler, :start, :end)
   end
 end
