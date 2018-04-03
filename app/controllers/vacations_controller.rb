@@ -5,12 +5,12 @@ class VacationsController < ApplicationController
 
   def new
     @vacation = Vacation.new
-    @user = User.find(params[:id])
+    @user = User.find_by(params[:id])
   end
 
   def create
     @vacation = Vacation.create(vacation_params)
-    redirect_to user_vacation_path(@vacation)
+    redirect_to new_vacation_path(@vacation)
   end
 
   private
