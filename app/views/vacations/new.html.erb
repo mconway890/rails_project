@@ -1,0 +1,18 @@
+<%= form_for @vacation do |f| %>
+  <%= f.label :name %><br />
+  <%= f.text_field :name%><br />
+
+  <%= f.label :destination %><br />
+  <%= f.text_field :destination%><br />
+
+  <%= f.label :type %><br />
+  <%= f.text_field :type %><br />
+
+  <%= f.label :start %><br />
+  <%= f.date_select :start , {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %><br />
+
+  <%= f.label :end %><br />
+  <%= f.date_select :end , {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year - 18, end_year: Date.today.year - 100}, {required: true} %><br />
+
+  <%= f.submit "Create New Vacation" %>
+<% end %>

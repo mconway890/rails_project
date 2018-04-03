@@ -1,0 +1,9 @@
+<h4><%= current_user.email %>'s Vacations</h4>
+
+<% @vacations.each do |v| %>
+  <ul>
+    <li><%= v.name %></li>
+  </ul>
+<% end %>
+
+<%= button_to "Create New Vacation", new_user_vacation_path(@user) %>
