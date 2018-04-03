@@ -1,4 +1,8 @@
 class User < ApplicationRecord
+  has_many :activities
+  has_many :items
+  has_many :vacations, through: :activities
+  has_many :vacations, through: :items
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
