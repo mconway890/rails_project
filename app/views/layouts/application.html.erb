@@ -6,13 +6,11 @@
     <link rel='stylesheet' href='style.css'/>
     <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <!--<div class="header"> <div class="container"> <div class="search"> <form class="search-form"> <input type="text" placeholder="Search Vacations"> <button type="submit" class="search-btn">Search</button> </form> </div> </div> </div> -->
     <div class="menu">
       <div class="container">
         <ul class="nav">
@@ -35,14 +33,16 @@
         <div class="container">
           <div class="row">
             <div class="col-md-5">
-              <!--<p class="date"><%= Time.now.strftime("Today is %m/%d/%Y") %></p>-->
-              <% if notice %>
-                <p class="alert alert-success"><%= notice %></p>
-              <% end %>
-              <% if alert %>
-                <p class="alert alert-danger"><%= alert %></p>
-              <% end %>
-              <%= yield %>
+              <div class="form">
+                <% if notice %>
+                  <p class="alert alert-success"><%= notice %></p>
+                <% end %>
+                <% if alert %>
+                  <p class="alert alert-danger"><%= alert %></p>
+                <% end %>
+
+                <%= yield %>
+              </div>
             </div>
           </div>
         </div>
@@ -56,12 +56,6 @@
     <ul>
       <li>
         <%= link_to 'My Vacations', vacations_index_path %>
-      </li>
-      <li>
-        <a href="#">Group List</a>
-      </li>
-      <li>
-        <a href="#">Messages</a>
       </li>
     </ul>
     <p>&copy;2018 Family Vacation Planner</p>
