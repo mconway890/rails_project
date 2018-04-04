@@ -14,7 +14,7 @@
     <div class="menu">
       <div class="container">
         <ul class="nav">
-          <a href="https://imgur.com/AaSpC3c"><img src="https://i.imgur.com/AaSpC3c.png?1" title="source: imgur.com"/></a>
+          <a href="<%= root_path %>"><img src="https://i.imgur.com/AaSpC3c.png?1" title="source: imgur.com"/></a>
           <% if user_signed_in? %>
             <li>Logged in as
               <strong><%= current_user.email %></strong>
@@ -55,7 +55,7 @@
   <div class="container">
     <ul>
       <li>
-        <%= link_to 'My Vacations', vacations_index_path %>
+        <%= link_to 'My Vacations', root_path %>
       </li>
     </ul>
     <p>&copy;2018 Family Vacation Planner</p>

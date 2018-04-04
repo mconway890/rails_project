@@ -1,13 +1,16 @@
-<h4><%= current_user.email %>'s Vacations</h4>
-
-<% @vacations.each do |v| %>
-  <ul>
-    <li>Name: <%= v.name %></li>
-    <li>Destination: <%= v.destination %></li>
-    <li>Travelers: <%= v.traveler %></li>
-    <li>Start: <%= v.start %></li>
-    <li>End: <%= v.end %></li>
-  </ul>
-<% end %>
-
-<%= button_to "Create New Vacation", new_vacations_path(@user) %>
+<div class="trips">
+  <h4>My Vacations</h4>
+    <hr>
+      <% @vacations.each do |v| %>
+        <ul>
+          <li>Name: <%= v.name %></li>
+          <li>Destination: <%= v.destination %></li>
+          <li>Travelers: <%= v.traveler %></li>
+          <li>Start: <%= v.start.strftime('%B %C, %Y') %></li>
+          <li>End: <%= v.end.strftime('%B %C, %Y') %></li>
+          <%= link_to "Edit Vacation", edit_vacation_path(v) %> |
+          <%= link_to "Cancel Vacation", vacation_path(v), :confirm => "Are you sure?", :method => :delete %>
+        </ul>
+      <% end %>
+    </div>
+      <%= button_to "Create New Vacation", new_vacation_path(@user) %>
