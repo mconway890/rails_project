@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  resource :vacations
+  resources :vacations do
+    resources :items
+    resources :activities
+  end
   post '/vacations/new'
-  get '/vacations/index'
-  root 'welcome#index'
+  root 'vacations#index'
   #get 'users/auth/twitter/callback', to: 'sessions#create'
 
   #resources :users do
