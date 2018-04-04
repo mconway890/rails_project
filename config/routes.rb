@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :activities
   end
   post '/vacations/new'
-  root 'vacations#index'
+  root 'welcome#index'
   #get 'users/auth/twitter/callback', to: 'sessions#create'
 
   #resources :users do
