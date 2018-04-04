@@ -98,14 +98,21 @@
 
  .main .container .col-md-5 {
      padding: 40px;
-     text-align: center;
 }
 
  .main .container .col-md-5 .form {
    background-color: #ffffff82;
-   border: 30px solid black;
-   border-radius: 10px;
  }
+
+ hr {
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+}
 
  .main .container .col-md-5 p.date {
      color: #fff;
@@ -183,7 +190,6 @@
  .col-md-12 img {
      width: 100%;
  }
-
 
 
  .footer {
