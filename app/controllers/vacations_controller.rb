@@ -1,6 +1,14 @@
 class VacationsController < ApplicationController
   def index
-    @vacations = Vacation.all
+    if params[:user_id]
+      @vacations = User.find(params[:user_id]).vacations
+    else
+      @vacations = Vacation.all
+    end
+  end
+
+  def show
+    @vacation = Vacation.find(params[:id])
   end
 
   def new
@@ -10,10 +18,22 @@ class VacationsController < ApplicationController
 
   def create
     @vacation = Vacation.create(vacation_params)
-    redirect_to vacations_index_path
+    redirect_to vacations_path
   end
 
-  def show
+  def edit
+    @vacation = Vacation.find_by(params[:id])
+  end
+
+  def update
+    @vacation = Vacation.find_by(params[:id])
+    @vacation.update(vacation_params)
+  end
+
+  def destroy
+    @vacation = Vacation.find_by(params[:id])
+    @vacation.destroy
+    redirect_to root_path, :notice => "Your vacation was deleted."
   end
 
   private
