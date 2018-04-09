@@ -4,6 +4,7 @@
   <li>Travelers: <%= @vacation.traveler %></li>
   <li>Start: <%= @vacation.start.strftime('%B %d, %Y') %></li>
   <li>End: <%= @vacation.end.strftime('%B %d, %Y') %></li>
+  <li>Activities: <%= @vacation.activities.name %></li>
   <%= link_to "Edit Vacation", edit_vacation_path(@vacation) %> |
   <%= link_to "Cancel Vacation", vacation_path(@vacation), :confirm => "Are you sure?", :method => :delete %>
 </ul>
