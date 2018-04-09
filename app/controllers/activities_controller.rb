@@ -1,10 +1,15 @@
-class ActivityController < ApplicationController
+class ActivitiesController < ApplicationController
+  def index
+    @activities = Activity.all
+  end
+
   def new
     @activity = Activity.new
   end
 
   def create
     @activity = Activity.create(activity_params)
+    redirect_to vacation_activity_path(@activity)
   end
 
   private

@@ -4,6 +4,7 @@
       <% @vacations.each do |v| %>
           <h4><%= link_to v.name, vacation_path(v) %></h4>
           <%= link_to "Edit Vacation", edit_vacation_path(v) %> |
+          <%= link_to "Add Activity", new_vacation_activity_path(v) %> |
           <%= link_to "Cancel Vacation", vacation_path(v), :confirm => "Are you sure?", :method => :delete %>
       <% end %>
     </div>
