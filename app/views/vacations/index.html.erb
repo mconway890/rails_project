@@ -9,7 +9,7 @@
           <li>Start: <%= v.start.strftime('%B %d, %Y') %></li>
           <li>End: <%= v.end.strftime('%B %d, %Y') %></li>
           <%= link_to "Edit Vacation", edit_vacation_path(v) %> |
-          <%= link_to "Cancel Vacation", vacation_path(v), :confirm => "Are you sure?", :method => :delete %>
+          <%= link_to "Cancel Vacation", vacation_path, :confirm => "Are you sure?", :method => :delete %>
         </ul>
       <% end %>
     </div>
