@@ -15,5 +15,10 @@
   <%= f.label :end %><br />
   <%= f.date_select :end , {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year + 5, end_year: Date.today.year}, {required: true} %><br /><br>
 
+  <%= f.label "Items" %><br>
+  <%= f.fields_for :items do |item_fields| %>
+    <%= item_fields.text_field :name %>
+  <% end %>
+  <br>
   <%= f.submit %>
 <% end %>
