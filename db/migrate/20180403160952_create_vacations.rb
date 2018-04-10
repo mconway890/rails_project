@@ -5,7 +5,9 @@ class CreateVacations < ActiveRecord::Migration[5.1]
       t.string :destination
       t.date :start
       t.date :end
-
+      t.integer :user_id
+      t.integer :item_id
+      t.integer :activity_id
       t.timestamps
     end
   end
