@@ -6,20 +6,22 @@
   <%= f.label :destination %><br />
   <%= f.text_field :destination%><br />
 
-  <%= f.label :travelers %><br />
-  <%= f.text_field :traveler %><br />
-
   <%= f.label :start %><br />
   <%= f.date_select :start , {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year + 5, end_year: Date.today.year}, {required: true} %><br />
 
   <%= f.label :end %><br />
   <%= f.date_select :end , {order: [:month, :day, :year], prompt: { day: 'Select day', month: 'Select month', year: 'Select year' }, start_year: Date.today.year + 5, end_year: Date.today.year}, {required: true} %><br /><br>
 
-  <%= f.label "Activity" %><br>
+  <%= f.label "Add Activity" %><br>
   <%= f.fields_for :activities do |act_fields| %>
     Name: <%= act_fields.text_field :name %><br>
     Category: <%= act_fields.text_field :activity_category %>
   <% end %>
-  <br>
+  <br><br>
+  <%= f.label "Add Item" %><br>
+  <%= f.fields_for :items do |item_fields| %>
+    Name: <%= item_fields.text_field :name %><br>
+    Category: <%= item_fields.text_field :item_category %>
+  <% end %><br><br>
   <%= f.submit %>
 <% end %>

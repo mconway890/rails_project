@@ -1,7 +1,7 @@
 <div class="trips">
   <h4>My Vacations</h4>
     <hr>
-      <% @vacations.each do |v| %>
+      <%= @vacations.each do |v| %>
           <h4><%= link_to v.name, vacation_path(v) %></h4>
           <%= link_to "Edit Vacation", edit_vacation_path(v) %> |
           <%= link_to "Add Activity", new_vacation_activity_path(v) %> |
